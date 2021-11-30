@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for employee in employees %}
+        <form action = "http://localhost:5000/data/{{employee.employee_id}}" method = "POST">  
+            <h3>{{employee}}<button class="btn btn-dark">Open data</button></h3><hr>
+        </form>
+    {% endfor %}
+{% endblock %}s
